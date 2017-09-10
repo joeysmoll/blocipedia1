@@ -14,8 +14,10 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { host: 'localhost', port: 8080 }
+  config.action_mailer.raise_delivery_errors = true
+  
+  #Send email to this host
+  config.action_mailer.default_url_options = { host: 'http://blocipedia1-joeysmoll.c9users.io', port: 8080}
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
