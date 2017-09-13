@@ -9,7 +9,7 @@
 <% end %>
 <% if current_user.premium? || current_user.admin? %>
     <div>
-        <%= link_to 'DOWNGRADE', downgrade_path, data: {confirm: 'Confirm downgrade and lose access to create private wikis.'} %> to Free account
+        <%= link_to 'DOWNGRADE', downgrade_path, data: {confirm: 'Confirm downgrade and lose access to create private Wikis. Private Wikis will become public.'} %> to Free account
     </div>
 <% end %>
 
