@@ -12,15 +12,30 @@ require 'faker'
 end
 users = User.all
 
-#Create Wikis
+#Create Public Wikis
 20.times do
     wiki = Wiki.new(
         user: users.sample,
         title: Faker::Pokemon.unique.move + " " + Faker::Food.ingredient,
         body: Faker::VentureBros.unique.quote,
+        private: false
     )
     wiki.save!
 end
+
+#Create Private Wikis
+20.times do
+    wiki = Wiki.new(
+        user: users.sample,
+        title: Faker::Food.ingredient + " " + Faker::Hipster.word,
+        body: Faker::FamilyGuy.quote,
+        private: true
+    )
+    wiki.save!
+end
+
+
+
 
 puts "Seeds Planted!"
 puts "#{User.count} users created"

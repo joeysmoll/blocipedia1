@@ -1,2 +1,15 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Blocipedia</h1>
+<h4>Create and Share Markdown Wikis</h4>
+<br>
+<br>
+<% if current_user.standard? || current_user.admin? %>
+    <div>
+        <%= link_to 'UPGRADE', new_charge_path %> to Premium account and create private Wikis
+    </div>
+<% end %>
+<% if current_user.premium? || current_user.admin? %>
+    <div>
+        <%= link_to 'DOWNGRADE', downgrade_path, data: {confirm: 'Confirm downgrade and lose access to create private wikis.'} %> to Free account
+    </div>
+<% end %>
+

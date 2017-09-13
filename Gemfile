@@ -56,3 +56,5 @@
  gem 'pundit'
  
  gem 'faker'
+ 
+ gem 'stripe'
