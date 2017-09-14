@@ -58,3 +58,6 @@
  gem 'faker'
  
  gem 'stripe'
+ 
+ gem 'redcarpet'
+ 

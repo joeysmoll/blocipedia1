@@ -7,7 +7,8 @@
        </div>
        <div class="form-group">
             <%= f.label :body %>
-            <%= f.text_area :body, class: 'form-control', placeholder: "Enter body" %>
+            <%= f.text_area :body, rows: 10, class: 'form-control', placeholder: "Enter body" %>
+            <small>Styling with Markdown is supported</small>
         </div>
         <% if user_is_authorized_to_create_private_post? %>
             <div class="form-group">
