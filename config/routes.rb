@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'downgrade' => 'charges#downgrade'
   
   resources :charges, only: [:new, :create]
+  resources :collaborators, only: [:create, :destroy]
 
   root 'welcome#index'
 end
